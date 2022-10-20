@@ -80,10 +80,8 @@ class ProductosApi {
   async updateById(id, obj) {
     try {
       const objs = this.list;
-      const IndexObj = objs.findIndex((o) => o.id == id);
-      const newObj = (objs[IndexObj] = { id: id, ...obj });
-      console.log(newObj);
-
+      const indexObj = objs.findIndex((o) => o.id == id);
+      const newObj = { ...objs[indexObj], ...obj }
       await this.write();
       return newObj;
     } catch (err) {
