@@ -55,48 +55,11 @@ class ProductosApi {
     }
   }
 
-  async getById(id) {
-    try {
-      const objs = this.list;
-      const IndexObj = objs.findIndex((o) => o.id == id);
-
-      if (IndexObj == -1) {
-        return null;
-      }
-      return objs[IndexObj];
-    } catch (error) {
-      console.log("error al buscar el producto");
-    }
-  }
-
   async getAll() {
     try {
       return this.list;
     } catch (error) {
       console.log(`Error al buscar la lista de productos ${error}`);
-    }
-  }
-
-  async updateById(id, obj) {
-    try {
-      const objs = this.list;
-      const indexObj = objs.findIndex((o) => o.id == id);
-      const newObj = { ...objs[indexObj], ...obj }
-      await this.write();
-      return newObj;
-    } catch (err) {
-      return `Hubo un error al actualizar el elemento ${err}`;
-    }
-  }
-
-  async deleteById(id) {
-    try {
-      const index = this.list.findIndex((element) => element.id == id);
-      this.list.splice(index, 1);
-      await this.write();
-      return `Se borro el elemento con id:${id}`;
-    } catch (err) {
-      return `Hubo un error al borrar el elemento ${err}`;
     }
   }
 }
