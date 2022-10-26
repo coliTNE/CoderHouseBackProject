@@ -1,0 +1,1 @@
+Pug no me sienta comodo. La verdad tengo un dilema entre handlebars y ejs, por un lado me gusta mas la sintaxis de handlebars, pero prefiero la declaracion de metodos y los "includes" de ejs.
