@@ -43,26 +43,6 @@ header {
   font-size: 2.4rem;
 }
 
-.nav__list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0 2rem;
-  list-style: none;
-}
-
-.nav__item {
-  font-size: 1.2rem;
-}
-
-.nav__link {
-  text-decoration: none;
-}
-
-.nav__link:hover {
-  color: var(--cornBlue);
-}
-
 main {
   padding: 1rem 0;
   margin: 0 auto;
@@ -74,7 +54,7 @@ main {
   padding: 2rem 0;
 }
 
-.form__main form {
+form {
   width: 50%;
 }
 
@@ -124,12 +104,30 @@ main {
   background-color: var(--russianGreen);
 }
 
-.list {
+.products {
   border: 2px var(--matteCharcoal) solid;
   margin: 2rem 0;
-  display: flex;
-  flex-direction: column;
   gap: 0 2rem;
+  text-transform: capitalize;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.list--title {
+  padding: 2rem 1rem;
+}
+
+.list img {
+  width: 40%;
+}
+
+.list + .list {
+  border-top: var(--grayDim) solid 1px;
 }
 
 .list__container {
@@ -147,3 +145,85 @@ main {
 .list__subtitle {
   text-transform: capitalize;
 }
+ 
+.chat {
+  width: 50%;
+  padding: 1rem 2rem;
+  background-color: var(--cornBlue);
+  border: 3px solid var(--babyBlue);
+  border-radius: 10px;
+  
+}
+
+.chat h2 {
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: .8rem;
+  color: var(--whiteGhost);
+}
+
+.chat-messages {
+  padding: 1rem;
+  background-color: var(--babyBlue);
+  border: 3px solid #91aee2;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.message {
+  background-color: var(--platinum);
+  padding: .5rem;
+  width: 60%;
+  border-radius: 10px;
+}
+
+.meta {
+  color: rgb(10, 10, 204);
+  font-weight: bold;
+}
+
+.meta span {
+  font-size: .9rem;
+}
+
+.text {
+  padding-top: .3rem;
+  font-style: italic;
+  color: green;
+}
+
+.chat-form-container {
+  background-color: var(--platinum);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+ 
+}
+
+#chat-form {
+  display: flex;
+}
+
+
+#chat-form button{
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  padding: .3rem 1rem;
+  transition: var(--t04);
+}
+
+#chat-form button:hover {
+  background-color: var(--blueBeau);
+}
+
+
+.chat-form-container input{
+  padding: .3rem 1rem;
+  border: none;
+}
+

@@ -1,0 +1,29 @@
+<div id="products" class="products">
+  <div class="list list--title">
+    <div class="list__col">
+      <h2>Producto</h2>
+    </div>
+    <div class="list__col">
+      <h2>Precio</h2>
+    </div>
+    <div class="list__col">
+      <h2>Imagen</h2>
+    </div>
+  </div>
+
+  <% list.forEach(e => { %>
+  <div class="list">
+    <div class="list__col">
+      <h2><%= e.title %></h2>
+    </div>
+    <div class="list__col">
+      <h2><%= e.price %></h2>
+    </div>
+    <div class="list__col">
+      <img src="<%= e.thumbnail %>" alt="err img">
+    </div>
+  </div>
+  <% }); %>
+  
+</div>
+
