@@ -5,7 +5,7 @@ const path = require("path");
 
 //Config
 
-const txtPath = path.resolve(__dirname, "../../productos.txt");
+const txtPath = path.resolve(__dirname, "../../productos.json");
 
 //Class
 
